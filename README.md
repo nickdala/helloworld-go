@@ -51,7 +51,7 @@ $ docker push nickdala/helloworld-go:1.0
 ## Deploy to Kubernetes
 
 ```bash
-kubectl apply -f helloworld-v1.yaml
+kubectl apply -f kubernetes/helloworld-v1.yaml
 ```
 
 ## Gateway
@@ -59,7 +59,7 @@ kubectl apply -f helloworld-v1.yaml
 To allow ‘ingress' traffic to reach the mesh we need to create a ‘Gateway' (to configure a load balancer) and a ‘VirtualService' (which controls the forwarding of traffic from the gateway to our services).
 
 ```
-kubectl apply -f helloworld-all-v1.yaml
+kubectl apply -f kubernetes/helloworld-all-v1.yaml
 ```
 
 ```
@@ -99,7 +99,6 @@ docker push nickdala/helloworld-go:2.0
 
 ```
 kubectl apply -f helloworld-v2.yaml
-kubectl apply -f destination-rule-v2.yaml
 kubectl apply -f helloworld-50-50.yaml
 ```
 
