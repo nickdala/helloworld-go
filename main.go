@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", HelloServer)
+	http.HandleFunc("/api/v1/message", HelloServer)
 	http.ListenAndServe(":8080", nil)
 }
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Go is the best language in the world\n")
+	fmt.Fprintf(w, "Scala is the best language in the world\n")
 }
