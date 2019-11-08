@@ -105,3 +105,15 @@ kubectl apply -f helloworld-50-50.yaml
 ```
 while :; do curl http://$GATEWAY_URL/api/v1/message; sleep 2; done
 ```
+
+You should see alternating message.  This is because 50% of the requests are routed to v1 of the service and the other 50% of the traffic is routed to v2.
+
+```
+Go is the best language in the world
+Go is the best language in the world
+Go is the best language in the world
+Scala is the best language in the world
+Scala is the best language in the world
+Go is the best language in the world
+Scala is the best language in the world
+```
