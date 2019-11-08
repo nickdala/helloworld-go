@@ -1,6 +1,6 @@
 # helloworld-go
 
-Simple hello world go web application
+Simple hello world go web application that can be deployed to a Kubernetes cluster with Istio Service Mesh.
 
 ## Build
 
